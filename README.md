@@ -23,6 +23,18 @@ The repository is organized into three main domains:
 
 ---
 
+## 📊 Visual Highlights
+
+<p float="left">
+  <img src="./astrophysics/images/gmm_redshift_distribution.png" width="32%" />
+  <img src="./atmospheric_science/images/relative_humidity_vs_pressure.png" width="32%" />
+  <img src="./computational_modeling/images/z2_z3_z6_histograms.png" width="32%" />
+</p>
+
+*Selected outputs: Galaxy Cluster Velocity Dispersion (Left), Exoplanet Relative Humidity Profile (Center), and Monte Carlo Parameter Estimation (Right).*
+
+---
+
 ## 🛠️ Technical Skills Demonstrated
 
 **Core Technologies:** `Python` `NumPy` `Pandas` `SciPy` `Matplotlib` `Astropy` `Jupyter`
