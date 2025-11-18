@@ -46,7 +46,7 @@ This project demonstrates a complete workflow for parameter estimation and stati
 - Chi-square distribution analysis to confirm proper fit statistics
 
 ![B-Hat Distribution](images/b_hat_distribution.png)<br>
-*Figure 2: Distribution of the estimated parameter $\hat{b}$ across 1000 Monte Carlo trials. The Gaussian shape confirms the validity of the error estimation methods.*
+*Figure 2: Distribution of the estimated parameter b across 1000 Monte Carlo trials. The Gaussian shape confirms the validity of the error estimation methods.*
 
 ---
 
@@ -61,7 +61,7 @@ This project explores statistical concepts through simulation and visualization.
 - Demonstration of the Central Limit Theorem with different sample sizes
 
 ![Random Variable Histograms](images/z2_z3_z6_histograms.png)<br>
-*Figure 3: Histograms of sum-variables ($Z_2, Z_3, Z_6$) showing the convergence toward a Normal distribution as predicted by the Central Limit Theorem.*
+*Figure 3: Histograms of sum-variables (Z<sub>2</sub>, Z<sub>3</sub>, Z<sub>6</sub>) showing the convergence toward a Normal distribution as predicted by the Central Limit Theorem.*
 
 - Generation and analysis of correlated random variables through common factors
 - Empirical validation of theoretical covariance and correlation coefficients
