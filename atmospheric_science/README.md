@@ -37,8 +37,7 @@ Key results include:
 - Potential temperature profiles for stability analysis
 - Optical depth integration using Beer–Lambert law
 
-![Potential Temperature Profile](images/temperature_vs_pressure.png)
-
+![Potential Temperature Profile](images/temperature_vs_pressure.png)<br>
 *Figure 1: Potential Temperature vs. Pressure. The tight clustering of all five probes confirms hydrostatic equilibrium and indicates a stable, adiabatic atmospheric structure.*
 
 Surface optical depth reaches **τ ≈ 4.6–4.9**, dominated by CO₂ absorption.
@@ -53,12 +52,10 @@ Excellent inter-probe agreement validates the reconstruction methodology. At **4
 ### Hydrological Cycle and Variability
 Precipitable water shows **31% spatial variability** (36.2–47.5 kg/m²), indicating active circulation or regional moisture differences.
 
-![Specific Humidity](images/specific_humidity_vs_pressure.png)
-
+![Specific Humidity](images/specific_humidity_vs_pressure.png)<br>
 *Figure 2: Specific Humidity profiles showing the vertical distribution of water mass. Note the divergence near the surface, suggesting local evaporation differences.*
 
-![Relative Humidity](images/relative_humidity_vs_pressure.png)
-
+![Relative Humidity](images/relative_humidity_vs_pressure.png)<br>
 *Figure 3: Relative Humidity vs. Pressure. The distinct separation between probes (particularly Probe 5 vs. Probe 2) reveals significant regional variability in saturation, likely driven by local weather systems.*
 
 - Global precipitation rate: **0.096 ± 0.014 mm/hour**
