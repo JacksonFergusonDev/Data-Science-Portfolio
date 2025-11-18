@@ -37,14 +37,27 @@ Key results include:
 - Potential temperature profiles for stability analysis
 - Optical depth integration using Beer–Lambert law
 
+![Potential Temperature Profile](images/temperature_vs_pressure.png)
+*Figure 1: Potential Temperature vs. Pressure. The tight clustering of all five probes confirms hydrostatic equilibrium and indicates a stable, adiabatic atmospheric structure.*
+
 Surface optical depth reaches **τ ≈ 4.6–4.9**, dominated by CO₂ absorption.
 
 ---
 
 ## Results and Significance
-- Excellent inter-probe agreement validates methodology:
-  - At **450 hPa**, temperatures vary only **0.57 K** (228.16–228.73 K)
-- Precipitable water shows **31% spatial variability** (36.2–47.5 kg/m²), indicating active circulation or regional moisture differences
+
+### Inter-Probe Agreement
+Excellent inter-probe agreement validates the reconstruction methodology. At **450 hPa**, temperatures vary only **0.57 K** (228.16–228.73 K).
+
+### Hydrological Cycle and Variability
+Precipitable water shows **31% spatial variability** (36.2–47.5 kg/m²), indicating active circulation or regional moisture differences.
+
+![Specific Humidity](images/specific_humidity_vs_pressure.png)
+*Figure 2: Specific Humidity profiles showing the vertical distribution of water mass. Note the divergence near the surface, suggesting local evaporation differences.*
+
+![Relative Humidity](images/relative_humidity_vs_pressure.png)
+*Figure 3: Relative Humidity vs. Pressure. The distinct separation between probes (particularly Probe 5 vs. Probe 2) reveals significant regional variability in saturation, likely driven by local weather systems.*
+
 - Global precipitation rate: **0.096 ± 0.014 mm/hour**
 - Atmospheric water residence time: **32.6 ± 5.6 years**
   - Much slower than Earth’s ~9-day cycle due to high gravity suppressing evaporation
