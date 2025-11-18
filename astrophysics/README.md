@@ -34,9 +34,12 @@ The mass-to-light (M/L) ratio serves as a key diagnostic: typical stellar popula
 
 1. **Cluster Member Selection**: Iterative refinement using 1.5 Mpc radial cutoff and ±3σ redshift clipping
 2. **Weighted Center Calculation**: Uses inverse-variance weighting based on photometric uncertainties
-3. **Redshift Analysis**: Compares single Gaussian vs. Gaussian Mixture Models using BIC
+3. **Redshift Analysis**: Compares single Gaussian vs. Gaussian Mixture Models (GMM) using BIC
 4. **Distance Calculations**: Implements relativistic Doppler corrections and ΛCDM cosmology
 5. **Spatial Analysis**: Computes projected distances with proper coordinate system corrections
+
+![Redshift Distribution](images/gmm_redshift_distribution.png)
+*Figure 1: Gaussian Mixture Model analysis of redshift distribution. The dominant peak identifies the cluster members, while the broader distribution represents background/foreground noise.*
 
 #### Physical Measurements
 - **Velocity Dispersion**: Fits Gaussian distributions to peculiar velocities with outlier detection
@@ -51,7 +54,13 @@ The mass-to-light (M/L) ratio serves as a key diagnostic: typical stellar popula
 
 The analysis yields a virial mass of **(8.03 ± 2.49) × 10¹⁴ M☉** and an extremely high mass-to-light ratio of **441 ± 137 M☉/L☉**. This ratio is nearly two orders of magnitude higher than typical stellar populations, providing strong evidence that ACO 2670 is dominated by dark matter.
 
+![Peculiar Velocities](images/peculiar_velocities_histogram.png)
+*Figure 2: Distribution of peculiar velocities within the cluster. The width of this distribution (velocity dispersion) is directly proportional to the cluster's total mass.*
+
 The cluster shows signs of dynamical activity with mild kinematic asymmetries, suggesting recent merger activity or ongoing accretion. Despite this complexity, the redshift distribution remains well-described by a single Gaussian, indicating the system is largely virialized.
+
+![Cumulative Luminosity](images/cumulative_luminosity_distribution.png)
+*Figure 3: Cumulative luminosity profile. This data represents the "visible" mass, which is compared against the dynamical mass to derive the M/L ratio.*
 
 ---
 
