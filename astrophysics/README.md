@@ -38,7 +38,7 @@ The mass-to-light (M/L) ratio serves as a key diagnostic: typical stellar popula
 4. **Distance Calculations**: Implements relativistic Doppler corrections and ΛCDM cosmology
 5. **Spatial Analysis**: Computes projected distances with proper coordinate system corrections
 
-![Redshift Distribution](images/gmm_redshift_distribution.png)
+![Redshift Distribution](images/gmm_redshift_distribution.png)<br>
 *Figure 1: Gaussian Mixture Model analysis of redshift distribution. The dominant peak identifies the cluster members, while the broader distribution represents background/foreground noise.*
 
 #### Physical Measurements
@@ -54,12 +54,12 @@ The mass-to-light (M/L) ratio serves as a key diagnostic: typical stellar popula
 
 The analysis yields a virial mass of **(8.03 ± 2.49) × 10¹⁴ M☉** and an extremely high mass-to-light ratio of **441 ± 137 M☉/L☉**. This ratio is nearly two orders of magnitude higher than typical stellar populations, providing strong evidence that ACO 2670 is dominated by dark matter.
 
-![Peculiar Velocities](images/peculiar_velocities_histogram.png)
+![Peculiar Velocities](images/peculiar_velocities_histogram.png)<br>
 *Figure 2: Distribution of peculiar velocities within the cluster. The width of this distribution (velocity dispersion) is directly proportional to the cluster's total mass.*
 
 The cluster shows signs of dynamical activity with mild kinematic asymmetries, suggesting recent merger activity or ongoing accretion. Despite this complexity, the redshift distribution remains well-described by a single Gaussian, indicating the system is largely virialized.
 
-![Cumulative Luminosity](images/cumulative_luminosity_distribution.png)
+![Cumulative Luminosity](images/cumulative_luminosity_distribution.png)<br>
 *Figure 3: Cumulative luminosity profile. This data represents the "visible" mass, which is compared against the dynamical mass to derive the M/L ratio.*
 
 ---
