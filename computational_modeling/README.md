@@ -37,9 +37,16 @@ This project demonstrates a complete workflow for parameter estimation and stati
 - Generation of synthetic data with non-uniform error bars
 - Parameter estimation using chi-square minimization
 - Uncertainty calculation from the Hessian matrix
+
+![Model Comparison](images/model_comparison.png)<br>
+*Figure 1: Comparison of the synthetic data (with error bars) against the optimized model fit. The residuals indicate the quality of the estimation.*
+
 - Monte Carlo validation of parameter estimates (1000 replications)
 - Pull distribution analysis to verify uncertainty estimates
 - Chi-square distribution analysis to confirm proper fit statistics
+
+![B-Hat Distribution](images/b_hat_distribution.png)<br>
+*Figure 2: Distribution of the estimated parameter $\hat{b}$ across 1000 Monte Carlo trials. The Gaussian shape confirms the validity of the error estimation methods.*
 
 ---
 
@@ -52,5 +59,9 @@ This project explores statistical concepts through simulation and visualization.
 - Statistical comparison between theoretical and empirical distributions
 - Visualization of bivariate relationships with and without added noise
 - Demonstration of the Central Limit Theorem with different sample sizes
+
+![Random Variable Histograms](images/z2_z3_z6_histograms.png)<br>
+*Figure 3: Histograms of sum-variables ($Z_2, Z_3, Z_6$) showing the convergence toward a Normal distribution as predicted by the Central Limit Theorem.*
+
 - Generation and analysis of correlated random variables through common factors
 - Empirical validation of theoretical covariance and correlation coefficients
