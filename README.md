@@ -67,7 +67,7 @@ To reproduce these analyses or explore the code locally:
 ## 📫 Connect With Me
 
 - **GitHub:** [@JacksonFergusonDev](https://github.com/JacksonFergusonDev)
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- **Email:** your.email@example.com *(optional - only if you want to be contacted)*
+- **LinkedIn:** [Jackson Ferguson](https://www.linkedin.com/in/jackson--ferguson/)
+- **Email:** jackson.ferguson0@gmail.com
 
 Feel free to reach out if you'd like to discuss these projects or potential collaborations!
