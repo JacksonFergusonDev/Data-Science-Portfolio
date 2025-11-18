@@ -40,30 +40,27 @@ The repository is organized into three main domains:
 To reproduce these analyses or explore the code locally:
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git](https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git)
+```bash
+   git clone https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git
    cd Data-Science-Portfolio
-````
+```
 
-2.  **Create a virtual environment:**
+2. **Create a virtual environment:**
+```bash
+   python3 -m venv venv
+   source venv/bin/activate
+```
 
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+3. **Install dependencies:**
+```bash
+   pip install -r requirements.txt
+```
 
-3.  **Install dependencies:**
+4. **Launch Jupyter:**
+```bash
+   jupyter notebook
+```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+---
 
-4.  **Launch Jupyter:**
-
-    ```bash
-    code .
-    ```
-
------
-
-*Created by [Jackson Ferguson](https://www.google.com/search?q=https://github.com/JacksonFergusonDev)*
+*Created by [Jackson Ferguson](https://github.com/JacksonFergusonDev)*
