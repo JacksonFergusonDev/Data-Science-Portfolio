@@ -56,11 +56,18 @@ To reproduce these analyses or explore the code locally:
    pip install -r requirements.txt
 ```
 
-4. **Launch Jupyter:**
+4. **Open in VS Code:**
 ```bash
-   jupyter notebook
+   code .
 ```
+   *(Or launch with `jupyter notebook` if you prefer the browser interface)*
 
 ---
 
-*Created by [Jackson Ferguson](https://github.com/JacksonFergusonDev)*
+## 📫 Connect With Me
+
+- **GitHub:** [@JacksonFergusonDev](https://github.com/JacksonFergusonDev)
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- **Email:** your.email@example.com *(optional - only if you want to be contacted)*
+
+Feel free to reach out if you'd like to discuss these projects or potential collaborations!
