@@ -8,7 +8,7 @@ The repository is organized into three main domains:
 
 ### [Astrophysics](./astrophysics/)
 *Analysis of astronomical survey data and dark matter research.*
-- **[Galaxy Cluster Dark Matter Analysis](./astrophysics/aco_2670_dark_matter_analysis.ipynb)**: Estimation of virial mass and mass-to-light ratios for galaxy cluster ACO 2670 using SDSS data. Provides evidence for dark matter dominance through computational techniques applied to large-scale cosmic structures.
+- **[Galaxy Cluster Dark Matter Analysis](./astrophysics/)**: Estimation of virial mass and mass-to-light ratios for galaxy cluster ACO 2670 using SDSS data. Provides evidence for dark matter dominance through computational techniques applied to large-scale cosmic structures.
 
 ### [Atmospheric Science](./atmospheric_science/)
 *Advanced analysis of planetary atmospheres and large scientific datasets.*

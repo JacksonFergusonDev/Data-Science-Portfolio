@@ -1,85 +1,101 @@
-# [Galaxy Cluster Dark Matter Analysis: ACO 2670](aco_2670_dark_matter_analysis.ipynb)
+# Galaxy Cluster Dark Matter Analysis: ACO 2670
 
-## Estimating Virial Mass and Mass-to-Light Ratios with SDSS Data
-**[View Full PDF Report](aco_2670_dark_matter_analysis_report.pdf)**
+[![Return to Portfolio](https://img.shields.io/badge/⬅️_Back_to-Main_Portfolio-grey)](../README.md)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Astropy](https://img.shields.io/badge/Astropy-Cosmology-orange)
+![SciPy](https://img.shields.io/badge/SciPy-Optimization-green)
 
-This project analyzes the galaxy cluster ACO 2670 using photometric and spectroscopic data from the Sloan Digital Sky Survey (SDSS) Data Release 18 to estimate its virial mass and mass-to-light ratio. The analysis provides compelling evidence for the presence of dark matter and demonstrates computational techniques for studying large-scale cosmic structures.
+**A computational astrophysics pipeline estimating the virial mass and mass-to-light ratio of galaxy cluster ACO 2670 using SDSS DR18 data.**
 
----
-
-### Background: Dark Matter and Galaxy Clusters
-
-Dark matter represents approximately 27% of the universe's total mass-energy content, yet it doesn't interact electromagnetically and remains invisible to direct observation. Galaxy clusters, the largest gravitationally bound structures in the universe, serve as natural laboratories for studying dark matter because they contain vast amounts of it.
-
-In 1933, Fritz Zwicky first discovered evidence for dark matter by observing that galaxies in the Coma Cluster were moving too fast to be held together by the visible matter alone. This "missing mass problem" suggested the presence of non-luminous matter. Today, we use similar techniques to study dark matter by comparing the total mass of clusters (inferred from galaxy motions) to their luminous mass (from starlight).
-
-The mass-to-light (M/L) ratio serves as a key diagnostic: typical stellar populations have M/L ratios of 1-10 solar units, while dark matter-dominated clusters show ratios of 200-500 or higher. This dramatic difference reveals the invisible dark matter halo that dominates cluster mass.
+📄 **[Read the Full Technical Report (PDF)](aco_2670_dark_matter_analysis_report.pdf)** 💻 **[View the Analysis Notebook](aco_2670_dark_matter_analysis.ipynb)**
 
 ---
 
-### Key Features
+## 🎯 Project Overview
+This project quantifies the dark matter content of a rich galaxy cluster by analyzing the kinematics of 98 member galaxies. It implements a robust statistical pipeline to isolate cluster members from foreground/background noise and applies the Virial Theorem to estimate the total dynamical mass.
 
-- **Multi-step iterative analysis**: Refines cluster membership through spatial and velocity constraints
-- **Robust statistical methods**: Implements Bayesian Information Criterion for model selection and various binning algorithms
-- **Relativistic corrections**: Uses proper cosmological distances rather than simple Hubble's Law approximations
-- **Comprehensive uncertainty analysis**: Propagates errors through all calculations using standard techniques
-- **Advanced visualization**: Creates publication-quality plots showing spatial distributions, velocity dispersions, and luminosity profiles
+**Key Result:** The cluster has a Mass-to-Light ratio of **$291 \pm 60 M_{\odot}/L_{\odot}$**, confirming that non-luminous dark matter constitutes >95% of its total mass.
 
 ---
 
-### Technical Implementation
+## 📊 Key Visualizations
 
-#### Data Processing Pipeline
-*Data Source: [cluster_data.csv](data/cluster_data.csv)*
+### 1. Membership Selection & Morphology
+*The iterative sigma-clipping algorithm converged on a stable core of 98 galaxies (red), successfully isolating the cluster from the background field (gray).*
 
-1. **Cluster Member Selection**: Iterative refinement using 1.5 Mpc radial cutoff and ±3σ redshift clipping
-2. **Weighted Center Calculation**: Uses inverse-variance weighting based on photometric uncertainties
-3. **Redshift Analysis**: Compares single Gaussian vs. Gaussian Mixture Models (GMM) using BIC
-4. **Distance Calculations**: Implements relativistic Doppler corrections and ΛCDM cosmology
-5. **Spatial Analysis**: Computes projected distances with proper coordinate system corrections
+<p float="left">
+  <img src="images/final_spatial_plot.png" width="48%" />
+  <img src="images/gmm_redshift_distribution.png" width="48%" /> 
+</p>
 
-![Redshift Distribution](images/gmm_redshift_distribution.png)<br>
-*Figure 1: Gaussian Mixture Model analysis of redshift distribution. The dominant peak identifies the cluster members, while the broader distribution represents background/foreground noise.*
+* **Left:** Final spatial configuration showing the 1.5 Mpc physical selection radius (dashed).
+* **Right:** Redshift distribution analysis. The data favors a single Gaussian profile (red) over a mixture model, indicating the cluster is likely virialized and not currently undergoing a major merger.
 
-#### Physical Measurements
-- **Velocity Dispersion**: Fits Gaussian distributions to peculiar velocities with outlier detection
-- **Luminosity Analysis**: Calculates absolute magnitudes and converts to solar luminosity units
-- **Effective Radius**: Determines half-light radius accounting for projection effects
-- **Virial Mass**: Applies virial theorem using velocity dispersion and spatial scale
-- **Mass-to-Light Ratio**: Combines dynamical mass with photometric luminosity
+### 2. Kinematics & Structure
+*By measuring how fast galaxies move and how light is distributed, we constrain the cluster's mass.*
 
----
+<p float="left">
+  <img src="images/peculiar_velocities_histogram.png" width="48%" />
+  <img src="images/cumulative_luminosity_distribution.png" width="48%" />
+</p>
 
-### Results and Significance
-
-The analysis yields a virial mass of **(8.03 ± 2.49) × 10¹⁴ M☉** and an extremely high mass-to-light ratio of **441 ± 137 M☉/L☉**. This ratio is nearly two orders of magnitude higher than typical stellar populations, providing strong evidence that ACO 2670 is dominated by dark matter.
-
-![Peculiar Velocities](images/peculiar_velocities_histogram.png)<br>
-*Figure 2: Distribution of peculiar velocities within the cluster. The width of this distribution (velocity dispersion) is directly proportional to the cluster's total mass.*
-
-The cluster shows signs of dynamical activity with mild kinematic asymmetries, suggesting recent merger activity or ongoing accretion. Despite this complexity, the redshift distribution remains well-described by a single Gaussian, indicating the system is largely virialized.
-
-![Cumulative Luminosity](images/cumulative_luminosity_distribution.png)<br>
-*Figure 3: Cumulative luminosity profile. This data represents the "visible" mass, which is compared against the dynamical mass to derive the M/L ratio.*
+* **Left:** Peculiar velocity dispersion ($\sigma_v \approx 932$ km/s). The width of this histogram is the direct proxy for the cluster's gravitational potential.
+* **Right:** Cumulative luminosity profile used to determine the Effective Radius ($R_{eff} \approx 1.07$ Mpc), encompassing 50% of the cluster's light.
 
 ---
 
-### Applications and Broader Impact
+## 🛠️ Technical Implementation
 
-This type of analysis serves multiple purposes in modern astrophysics:
+The analysis is built in **Python** using a modular functional approach. Key computational techniques include:
 
-- **Cosmological Parameter Estimation**: Cluster masses help constrain dark matter density and structure formation models
-- **Galaxy Evolution Studies**: Understanding how galaxies behave in dark matter-dominated environments
-- **Dark Matter Physics**: Testing alternative theories of gravity and dark matter interactions
-- **Large-Scale Structure**: Mapping the cosmic web through cluster mass measurements
+### Data Pipeline & Cleaning
+* **Iterative Sigma-Clipping:** Developed a convergence algorithm that iteratively refines cluster membership based on radial velocity ($3\sigma$ cuts) and projected distance ($1.5 \text{ Mpc}$).
+* **Cosmology:** Utilizes `astropy.cosmology` (Planck 2018) for accurate relativistic distance calculations ($D_A$ vs $D_L$).
 
-The computational techniques demonstrated here are widely applicable to analyzing massive datasets from current and future astronomical surveys, making this both a scientific investigation and a practical demonstration of astronomical data analysis methods.
+### Statistical Modeling
+* **Velocity Dispersion:** Estimated using both **Gaussian Maximum Likelihood** and **Biweight Midvariance** (a robust estimator insensitive to outliers).
+* **Substructure Detection:** Implemented **Gaussian Mixture Models (GMM)** and evaluated model fit using the **Bayesian Information Criterion (BIC)**.
+
+### Photometry & Mass Modeling
+* **Luminosity Function:** Converted apparent magnitudes to absolute solar luminosities ($L_{\odot}$) using distance moduli and K-corrections.
+* **Virial Mass:** Calculated using the velocity dispersion and half-mass radius ($M \propto \sigma^2 R$).
 
 ---
 
-### Prerequisites
+## 📊 Final Results Summary
 
-- Python proficiency with NumPy, SciPy, Matplotlib, and Astropy
-- Basic understanding of statistics (error propagation, fitting, hypothesis testing)
-- Familiarity with astronomical concepts (redshift, magnitudes, coordinate systems)
-- Knowledge of SQL for database queries (SDSS data access)
+| Parameter | Value | Uncertainty | Description |
+| :--- | :--- | :--- | :--- |
+| **Member Count** | 98 | - | Final galaxy count after convergence |
+| **Velocity Dispersion** | 932 km/s | $\pm 95$ | Line-of-sight velocity spread ($\sigma_v$) |
+| **Virial Mass** | $6.45 \times 10^{14} M_{\odot}$ | $\pm 1.31$ | Total gravitating mass |
+| **Mass-to-Light Ratio** | **291 $M_{\odot}/L_{\odot}$** | $\pm 60$ | **Evidence for Dark Matter** |
+
+---
+
+## 🚀 Quick Start
+
+This project is part of my Data Science Portfolio. To reproduce the analysis:
+
+1.  **Clone the portfolio repository:**
+    ```bash
+    git clone [https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git](https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git)
+    cd Data-Science-Portfolio
+    ```
+
+2.  **Install shared dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Launch the Astrophysics analysis:**
+    ```bash
+    cd astrophysics
+    jupyter notebook aco_2670_dark_matter_analysis.ipynb
+    ```
+
+---
+
+### Author
+**Jackson Ferguson** Astrophysics Undergraduate, University of Victoria  
+[GitHub Profile](https://github.com/JacksonFergusonDev) | [LinkedIn](https://linkedin.com/in/jackson--ferguson/)
