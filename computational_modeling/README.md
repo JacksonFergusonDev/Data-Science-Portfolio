@@ -1,67 +1,135 @@
-# Computational Modeling and Analysis
+# Computational Statistics Portfolio
 
-## [Hypothesis Testing Simulation with Critical Value Analysis](hypothesis_testing_simulation.ipynb)
+[![Return to Portfolio](https://img.shields.io/badge/⬅️_Back_to-Main_Portfolio-grey)](../README.md)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![SciPy](https://img.shields.io/badge/SciPy-Statistics-orange)
+![NumPy](https://img.shields.io/badge/NumPy-Computation-green)
 
-This project demonstrates fundamental concepts of statistical hypothesis testing through simulation. The code implements and analyzes two competing probability distributions (H0 and H1) to explore statistical error rates and sampling methods.
+**A collection of statistical analysis projects demonstrating hypothesis testing, parameter estimation, and Monte Carlo simulation techniques.**
 
-### Key Features:
-- Calculation of normalization constants for probability density functions
-- Determination of critical value for a 95% confidence level hypothesis test
-- Implementation of specialized sampling techniques:
-  - Inverse transform sampling for H0
-  - Accept-reject method for H1
-- Empirical measurement of Type I and Type II error rates
-- Visual comparison of theoretical PDFs against generated sample distributions
+> 🚧 **Currently Refactoring** - This section is being consolidated into a single, streamlined notebook (`computational_statistics_portfolio.ipynb`) with an improved data pipeline structure. Individual notebooks below will be replaced once refactoring is complete.
 
 ---
 
-## [Statistical Distance Analysis Between Uniform Random Points](statistical_distance_analysis.ipynb)
+## 🎯 Project Overview
+This collection demonstrates core statistical methods and computational techniques used in data science and scientific computing. Each project showcases a different aspect of statistical inference, from hypothesis testing and sampling methods to parameter estimation and uncertainty quantification.
 
-This project demonstrates statistical inference techniques by analyzing the distances between random points on two parallel rods. The implementation includes:
-
-### Key Features:
-- Simulation of random points on parallel rods with specified geometry
-- Derivation and visualization of the theoretical probability density function
-- Maximum likelihood estimation of rod length from distance measurements
-- Uncertainty quantification using both numerical and analytical second derivatives
-- Bootstrap validation through 1000 replicate experiments
-- Analysis of estimator bias and variance
+**Scope:** The projects use synthetic datasets and simulated experiments to illustrate fundamental statistical concepts without the complexity of real-world data noise, making the underlying principles more transparent.
 
 ---
 
-## [Parameter Estimation and Statistical Validation](parameter_estimation.ipynb)
+## 📊 Key Visualizations
 
-This project demonstrates a complete workflow for parameter estimation and statistical validation using synthetic data. The code simulates a physical system with the model function `a*t*cos(b*t)`, estimates parameters via chi-square minimization, and validates the statistical properties of the estimation process.
+### Statistical Inference & Validation
+*Demonstrations of parameter estimation, uncertainty quantification, and theoretical validation through simulation.*
 
-### Key Features:
-- Generation of synthetic data with non-uniform error bars
-- Parameter estimation using chi-square minimization
-- Uncertainty calculation from the Hessian matrix
+<p float="left">
+  <img src="images/model_comparison.png" width="48%" />
+  <img src="images/b_hat_distribution.png" width="48%" /> 
+</p>
 
-![Model Comparison](images/model_comparison.png)<br>
-*Figure 1: Comparison of the synthetic data (with error bars) against the optimized model fit. The residuals indicate the quality of the estimation.*
+* **Left:** Model Fit Validation. Comparison of synthetic data (with error bars) against an optimized model fit using chi-square minimization. The residuals indicate the quality of the parameter estimation.
+* **Right:** Monte Carlo Parameter Distribution. Distribution of the estimated parameter *b* across 1000 trials. The Gaussian shape confirms the validity of the error estimation methods and demonstrates the Central Limit Theorem in action.
 
-- Monte Carlo validation of parameter estimates (1000 replications)
-- Pull distribution analysis to verify uncertainty estimates
-- Chi-square distribution analysis to confirm proper fit statistics
+### Probability & Convergence
+*Exploration of the Central Limit Theorem and the behavior of sum-variables.*
 
-![B-Hat Distribution](images/b_hat_distribution.png)<br>
-*Figure 2: Distribution of the estimated parameter b across 1000 Monte Carlo trials. The Gaussian shape confirms the validity of the error estimation methods.*
+<p float="left">
+  <img src="images/z2_z3_z6_histograms.png" width="48%" />
+</p>
+
+* **Center:** Central Limit Theorem Demonstration. Histograms of sum-variables (Z₂, Z₃, Z₆) showing progressive convergence toward a Normal distribution as sample size increases, as predicted by theory.
 
 ---
 
-## [Statistical Analysis and Simulation of Random Variables](statistical_analysis_simulation.ipynb)
+## 🛠️ Technical Implementation
 
-This project explores statistical concepts through simulation and visualization. It consists of two main parts: a match outcome simulator and an exploration of the Central Limit Theorem and correlated random variables.
+The analysis is built in **Python** using NumPy and SciPy, with emphasis on implementing statistical algorithms from first principles rather than relying on black-box libraries.
 
-### Key Features:
-- Simulation of game outcomes (wins/losses/draws) with fixed probabilities
-- Statistical comparison between theoretical and empirical distributions
-- Visualization of bivariate relationships with and without added noise
-- Demonstration of the Central Limit Theorem with different sample sizes
+### Hypothesis Testing & Sampling
+* **PDF Normalization:** Calculates normalization constants for arbitrary probability density functions using numerical integration.
+* **Critical Value Determination:** Implements hypothesis testing framework with Type I error control at 95% confidence level.
+* **Specialized Sampling Methods:** 
+  - Inverse transform sampling for standard distributions
+  - Accept-reject algorithm for complex PDFs
+* **Error Rate Analysis:** Empirical measurement of Type I and Type II error rates through simulation.
 
-![Random Variable Histograms](images/z2_z3_z6_histograms.png)<br>
-*Figure 3: Histograms of sum-variables (Z<sub>2</sub>, Z<sub>3</sub>, Z<sub>6</sub>) showing the convergence toward a Normal distribution as predicted by the Central Limit Theorem.*
+### Parameter Estimation
+* **Chi-Square Minimization:** Implements least-squares fitting for model parameter estimation with non-uniform error bars.
+* **Uncertainty Quantification:** Calculates parameter uncertainties from the Hessian matrix at the minimum.
+* **Monte Carlo Validation:** Validates uncertainty estimates through 1000 replicate experiments.
+* **Pull Distribution Analysis:** Verifies that estimated uncertainties are correctly calibrated.
 
-- Generation and analysis of correlated random variables through common factors
-- Empirical validation of theoretical covariance and correlation coefficients
+### Maximum Likelihood Estimation
+* **Geometric Problem:** Analyzes distances between random points on parallel rods to estimate rod length.
+* **Analytical Derivation:** Derives theoretical PDF from geometric constraints.
+* **MLE Implementation:** Finds maximum likelihood estimator and quantifies uncertainty using Fisher information.
+* **Bootstrap Validation:** Confirms estimator properties through 1000 bootstrap replications.
+
+### Probability Theory
+* **Distribution Simulation:** Generates samples from various probability distributions and compares to theoretical predictions.
+* **Correlation Analysis:** Demonstrates generation of correlated random variables through common factors.
+* **Empirical Validation:** Compares simulated covariance and correlation coefficients against theoretical values.
+
+---
+
+## 📂 Project Structure
+
+### Consolidated Portfolio (In Progress)
+**[computational_statistics_portfolio.ipynb](computational_statistics_portfolio.ipynb)** - Unified notebook with improved data pipeline combining all projects below.
+
+### Individual Projects (Being Consolidated)
+
+#### 1. Hypothesis Testing Simulation
+**[hypothesis_testing_simulation.ipynb](hypothesis_testing_simulation.ipynb)**
+- Implementation of competing probability distributions (H0 vs H1)
+- Inverse transform and accept-reject sampling methods
+- Empirical error rate analysis
+
+#### 2. Statistical Distance Analysis
+**[statistical_distance_analysis.ipynb](statistical_distance_analysis.ipynb)**
+- Maximum likelihood estimation for geometric problem
+- Uncertainty quantification via numerical and analytical methods
+- Bootstrap validation of estimator properties
+
+#### 3. Parameter Estimation & Validation
+**[parameter_estimation.ipynb](parameter_estimation.ipynb)**
+- Chi-square minimization for model fitting
+- Hessian-based uncertainty calculation
+- Monte Carlo validation and pull distribution analysis
+
+#### 4. Random Variable Simulation
+**[statistical_analysis_simulation.ipynb](statistical_analysis_simulation.ipynb)**
+- Central Limit Theorem demonstration
+- Correlated random variable generation
+- Empirical validation of theoretical statistics
+
+---
+
+## 🚀 Quick Start
+
+This project is part of my Data Science Portfolio. To reproduce the analysis:
+
+1. **Clone the portfolio repository:**
+```bash
+   git clone https://github.com/JacksonFergusonDev/Data-Science-Portfolio.git
+   cd Data-Science-Portfolio
+```
+
+2. **Install shared dependencies:**
+```bash
+   pip install -r requirements.txt
+```
+
+3. **Launch the Computational Modeling analysis:**
+```bash
+   cd computational_modeling
+   jupyter notebook computational_statistics_portfolio.ipynb
+```
+   *(Or explore individual notebooks while refactoring is in progress)*
+
+---
+
+### Author
+**Jackson Ferguson** | Astrophysics Undergraduate, University of Victoria  
+[GitHub Profile](https://github.com/JacksonFergusonDev) | [LinkedIn](https://linkedin.com/in/jackson--ferguson/)
